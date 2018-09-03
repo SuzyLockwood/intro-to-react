@@ -11,20 +11,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 
+   <style>
+    #app {
+      padding: 50px;
+      background-color: #EEE;
+    }
+    #app h1 {
+      font-size: 144px;
+      font-family: sans-serif;
+      color: #0060A8;
+    }
+  </style>
+
     <script type="text/babel">
-       class Greeting extends React.Component {
-         render() {
-           return (
-             <div>
-               <h1>Hello World!</h1>
-             </div>
-           );
-         }
-       }
- 
-       ReactDOM.render(
-         <Greeting />, document.getElementById('app')
-       );
+      function Welcome(props) {
+        return <h1>Hello, {props.name}</h1>;
+      }
+
+      const element = <Welcome name="Suzy" />;
+      ReactDOM.render(
+        element,
+        document.getElementById("app")
+      );
+
     </script>
   </body>
 </html>
